@@ -53,19 +53,19 @@ const TaskFilter: React.FC<TaskFilterProps> = ({ onFilterChange }) => {
   return (
     <ButtonContainer>
       <FilterButton
-        $isActive={activeFilter === 'pending'} // Use $isActive instead of isActive
+        $isActive={activeFilter === 'pending'} 
         onClick={() => handleFilterChange('pending')}
       >
         Pending Tasks
       </FilterButton>
       <FilterButton
-        $isActive={activeFilter === 'inProgress'} // Use $isActive instead of isActive
+        $isActive={activeFilter === 'inProgress'} 
         onClick={() => handleFilterChange('inProgress')}
       >
         In Progress
       </FilterButton>
       <FilterButton
-        $isActive={activeFilter === 'completed'} // Use $isActive instead of isActive
+        $isActive={activeFilter === 'completed'} 
         onClick={() => handleFilterChange('completed')}
       >
         Completed Tasks
