@@ -64,6 +64,7 @@ const InputField = styled.input`
     width: 100%;
   }
 `;
+
 const Button = styled.button`
   color: white;
   cursor: pointer;
@@ -100,7 +101,6 @@ const Button = styled.button`
     transform: scale(1.2);
   }
 `;
-
 
 const TaskList = styled.ul`
   width: 100%;
@@ -207,7 +207,7 @@ const App: React.FC = () => {
   const handleMouseLeave = () => {
     hideTimeout = setTimeout(() => {
       setShowOptions(null);
-    }, 3000);
+    }, 2000);
   };
 
   useEffect(() => {
@@ -296,7 +296,7 @@ const App: React.FC = () => {
                 />
               )}
               {showOptions === task.id && task.status === "pending" && (
-                <OptionsContainer isVisible={showOptions === task.id}>
+                <OptionsContainer isVisible={showOptions === task.id} >
                   <Option onClick={() => changeStatus(task.id, "inProgress")}>
                     In Progress
                   </Option>
